@@ -19,6 +19,26 @@
 		body {
 				background-image: url("un.jpg");
 }
+.purple-border textarea {
+    border: 1px solid #ba68c8;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.purple-border .form-control:focus {
+	    margin-left: 2px;
+    margin-right: 2px;
+	
+    border: 1px solid #ba68c8;
+    box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
+}
+
+.green-border-focus .form-control:focus {
+        margin-left: 2px;
+    margin-right: 2px;
+    
+    border: 1px solid #8bc34a;
+    box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, .25);
+}
 	</style>
 </head>
 <body>
@@ -215,29 +235,25 @@
                                   required></textarea>
                          </div><br/> -->
                          <form>
-                         <div class="form-group">
-    						<!-- <label for="inputsm">Small input</label> -->
-    						<label class="label">Title:</label>
-    						<input class="form-control input-sm" id="inputsm" type="text" placeholder="Title Of Your Page" required="required">
-  						</div>
-  						<div class="form-group">
-    						<!-- <label for="inputsm">Small input</label> -->
-    						<label class="label">Post Description:</label>
-    						<input class="form-control input-sm" id="inputsm" type="text" placeholder="Post Description" required="required">
-  						</div>
+                         <div class="form-group purple-border">
+  							<label for="exampleFormControlTextarea4">Title Of Your Project</label>
+  							<textarea class="form-control" id="exampleFormControlTextarea4" rows="2" placeholder="Enter The Title"></textarea>
+						</div>
+  						 <div class="form-group purple-border">
+  							<label for="exampleFormControlTextarea4">Post Description</label>
+  							<textarea class="form-control" id="exampleFormControlTextarea4" rows="2" placeholder="Enter The Description"></textarea>
+						</div>
   						<br/>
-                            <div class="field mr-t-20">
-                            <label class="label">Select Date:</label>
-                            <div class="control">
-                       			<input type="date" required="required" placeholder="Date">
-                            </div>
+                            	 <div class="form-group purple-border">
+  							<label for="exampleFormControlTextarea4">Select Date</label>
+  							<input type="date">
+						</div>
                         </div>
                         
-                            <div class="form-group">
-    						<!-- <label for="inputsm">Small input</label> -->
-    						<label class="label">Address:</label>
-    						<input class="form-control input-sm" id="inputsm" type="text" required="required"placeholder="Address">
-  						</div>
+                        <div class="form-group purple-border">
+  							<label for="exampleFormControlTextarea4">Address</label>
+  							<textarea class="form-control" id="exampleFormControlTextarea4" rows="2" placeholder="Enter the full Address"></textarea>
+						</div>
                         
                         </div>
                          <div class="field mr-t-20">
@@ -246,7 +262,9 @@
                         		<input type="file">
                             </div>
                         </div><br/>
-                        <button @click="submitForm" class="button is-primary" type="submit">Submit</button>
+                        <!-- <button @click="submitForm" class="button is-primary" type="submit">Submit</button> -->
+                        <button type="button" class="btn btn-deep-orange">Submit</button>
+                        
                     </b-tab-item>
 
                 </b-tabs>
